@@ -2,7 +2,7 @@ import os
 import io
 import glob
 from pathlib import Path
-from chatterbot.exceptions import OptionalDependencyImportError
+from chatterbotpro.exceptions import OptionalDependencyImportError
 
 try:
     from chatterbot_corpus.corpus import DATA_DIRECTORY

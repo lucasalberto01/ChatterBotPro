@@ -2,7 +2,7 @@
 This module contains various text-comparison algorithms
 designed to compare one statement to another.
 """
-from chatterbot.exceptions import OptionalDependencyImportError
+from chatterbotpro.exceptions import OptionalDependencyImportError
 from difflib import SequenceMatcher
 
 

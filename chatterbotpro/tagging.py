@@ -1,5 +1,5 @@
 import string
-from chatterbot import languages
+from chatterbotpro import languages
 
 
 class LowercaseTagger(object):
