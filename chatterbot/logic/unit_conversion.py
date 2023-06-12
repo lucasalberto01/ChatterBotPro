@@ -33,7 +33,7 @@ class UnitConversion(LogicAdapter):
             )
             raise OptionalDependencyImportError(message)
 
-        self.language = kwargs.get('language', languages.ENG)
+        self.language = kwargs.get('language', languages.POR)
         self.cache = {}
         self.patterns = [
             (

@@ -22,7 +22,7 @@ class MathematicalEvaluation(LogicAdapter):
     def __init__(self, chatbot, **kwargs):
         super().__init__(chatbot, **kwargs)
 
-        self.language = kwargs.get('language', languages.ENG)
+        self.language = kwargs.get('language', languages.POR)
         self.cache = {}
 
     def can_process(self, statement):
