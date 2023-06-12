@@ -8,14 +8,9 @@ known conversations. The language independent design of ChatterBot allows it
 to be trained to speak any language.
 
 [![Package Version](https://img.shields.io/pypi/v/chatterbot.svg)](https://pypi.python.org/pypi/chatterbot/)
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Python 3.6+](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Django 2.0](https://img.shields.io/badge/Django-2.0-blue.svg)](https://docs.djangoproject.com/en/2.1/releases/2.0/)
-[![Requirements Status](https://requires.io/github/gunthercox/ChatterBot/requirements.svg?branch=master)](https://requires.io/github/gunthercox/ChatterBot/requirements/?branch=master)
-[![Build Status](https://travis-ci.org/gunthercox/ChatterBot.svg?branch=master)](https://travis-ci.org/gunthercox/ChatterBot)
 [![Documentation Status](https://readthedocs.org/projects/chatterbot/badge/?version=stable)](http://chatterbot.readthedocs.io/en/stable/?badge=stable)
-[![Coverage Status](https://img.shields.io/coveralls/gunthercox/ChatterBot.svg)](https://coveralls.io/r/gunthercox/ChatterBot)
-[![Code Climate](https://codeclimate.com/github/gunthercox/ChatterBot/badges/gpa.svg)](https://codeclimate.com/github/gunthercox/ChatterBot)
-[![Join the chat at https://gitter.im/chatterbot/Lobby](https://badges.gitter.im/chatterbot/Lobby.svg)](https://gitter.im/chatterbot/Lobby?utm_source=badge&utm_medium=badge&utm_content=badge)
 
 An example of typical input would be something like this:
 
@@ -30,10 +25,10 @@ An untrained instance of ChatterBot starts off with no knowledge of how to commu
 
 ## Installation
 
-This package can be installed from [PyPi](https://pypi.python.org/pypi/ChatterBot) by running:
+This package can be installed from [~~PyPi~~](https://pypi.python.org/pypi/ChatterBot) by running:
 
 ```
-pip install chatterbot
+pip install https://github.com/lucasalberto01/chatterbot-pro/archive/refs/heads/master.zip 
 ```
 
 ## Basic Usage
@@ -81,28 +76,6 @@ trainer.train("chatterbot.corpus.english.conversations")
 
 **Corpus contributions are welcome! Please make a pull request.**
 
-# [Documentation](https://chatterbot.readthedocs.io/)
-
-View the [documentation](https://chatterbot.readthedocs.io/)
-for ChatterBot on Read the Docs.
-
-To build the documentation yourself using [Sphinx](http://www.sphinx-doc.org/), run:
-
-```
-sphinx-build -b html docs/ build/
-```
-
-# Examples
-
-For examples, see the [examples](https://github.com/gunthercox/ChatterBot/tree/master/examples)
-directory in this project's git repository.
-
-There is also an example [Django project using ChatterBot](https://github.com/gunthercox/ChatterBot/tree/master/examples), as well as an example [Flask project using ChatterBot](https://github.com/chamkank/flask-chatterbot).
-
-# History
-
-See release notes for changes https://github.com/gunthercox/ChatterBot/releases
-
 # Development pattern for contributors
 
 1. [Create a fork](https://help.github.com/articles/fork-a-repo/) of
@@ -117,3 +90,9 @@ See release notes for changes https://github.com/gunthercox/ChatterBot/releases
 # License
 
 ChatterBot is licensed under the [BSD 3-clause license](https://opensource.org/licenses/BSD-3-Clause).
+
+# Acknowledgements
+
+Original Author: [Gunther Cox](https://github.com/gunthercox/ChatterBot)
+
+ChatterBot uses [spaCy](https://spacy.io) for natural language processing.
