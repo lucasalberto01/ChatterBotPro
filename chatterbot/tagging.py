@@ -15,6 +15,9 @@ class LowercaseTagger(object):
 
 
 class PosLemmaTagger(object):
+    """
+    Returns a string of text containing part-of-speech, lemma pairs.
+    """
 
     def __init__(self, language=None):
         import spacy
