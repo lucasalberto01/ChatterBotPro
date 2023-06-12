@@ -1,11 +1,18 @@
-![ChatterBot: Machine learning in Python](https://i.imgur.com/b3SCmGT.png)
 
 # ChatterBot
+
+<p align="center">
+  <img width="320" height="auto" src="https://github.com/lucasalberto01/chatterbot-pro/assets/29151352/fa57c25c-ca8b-4577-8093-1396626f5f69">
+</p>
 
 ChatterBot is a machine-learning based conversational dialog engine build in
 Python which makes it possible to generate responses based on collections of
 known conversations. The language independent design of ChatterBot allows it
 to be trained to speak any language.
+
+By default we use more in Portuguese
+
+---
 
 [![Package Version](https://img.shields.io/pypi/v/chatterbot.svg)](https://pypi.python.org/pypi/chatterbot/)
 [![Python 3.6+](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-360/)
