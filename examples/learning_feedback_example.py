@@ -1,5 +1,5 @@
 from chatterbot import ChatBot
-from chatterbot.conversation import Statement
+from chatterbotpro.conversation import Statement
 
 """
 This example shows how to create a chat bot that

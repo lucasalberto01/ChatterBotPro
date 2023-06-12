@@ -11,7 +11,7 @@ class IndexedTextSearch:
     name = 'indexed_text_search'
 
     def __init__(self, chatbot, **kwargs):
-        from chatterbot.comparisons import LevenshteinDistance
+        from chatterbotpro.comparisons import LevenshteinDistance
 
         self.chatbot = chatbot
 
@@ -97,7 +97,7 @@ class TextSearch:
     name = 'text_search'
 
     def __init__(self, chatbot, **kwargs):
-        from chatterbot.comparisons import LevenshteinDistance
+        from chatterbotpro.comparisons import LevenshteinDistance
 
         self.chatbot = chatbot
 

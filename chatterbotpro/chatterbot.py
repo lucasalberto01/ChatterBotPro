@@ -13,10 +13,10 @@ class ChatBot(object):
     def __init__(self, name, **kwargs):
         self.name = name
 
-        storage_adapter = kwargs.get('storage_adapter', 'chatterbot.storage.SQLStorageAdapter')
+        storage_adapter = kwargs.get('storage_adapter', 'chatterbotpro.storage.SQLStorageAdapter')
 
         logic_adapters = kwargs.get('logic_adapters', [
-            'chatterbot.logic.BestMatch'
+            'chatterbotpro.logic.BestMatch'
         ])
 
         # Check that each adapter is a valid subclass of it's respective parent
@@ -42,7 +42,7 @@ class ChatBot(object):
 
         preprocessors = kwargs.get(
             'preprocessors', [
-                'chatterbot.preprocessors.clean_whitespace'
+                'chatterbotpro.preprocessors.clean_whitespace'
             ]
         )
 

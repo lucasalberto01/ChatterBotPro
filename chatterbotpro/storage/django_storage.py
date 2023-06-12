@@ -1,5 +1,5 @@
-from chatterbot.storage import StorageAdapter
-from chatterbot import constants
+from chatterbotpro.storage import StorageAdapter
+from chatterbotpro import constants
 
 
 class DjangoStorageAdapter(StorageAdapter):
@@ -140,7 +140,8 @@ class DjangoStorageAdapter(StorageAdapter):
                 statement_model_object.search_text = self.tagger.get_text_index_string(statement.text)
 
             if not statement.search_in_response_to and statement.in_response_to:
-                statement_model_object.search_in_response_to = self.tagger.get_text_index_string(statement.in_response_to)
+                statement_model_object.search_in_response_to = self.tagger.get_text_index_string(
+                    statement.in_response_to)
 
             statement_model_object.save()
 

@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic import View
 from django.http import JsonResponse
 from chatterbot import ChatBot
-from chatterbot.ext.django_chatterbot import settings
+from chatterbotpro.ext.django_chatterbot import settings
 
 
 class ChatterBotAppView(TemplateView):

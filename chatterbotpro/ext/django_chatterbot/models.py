@@ -1,4 +1,4 @@
-from chatterbot.ext.django_chatterbot.abstract_models import AbstractBaseStatement, AbstractBaseTag
+from chatterbotpro.ext.django_chatterbot.abstract_models import AbstractBaseStatement, AbstractBaseTag
 
 
 class Statement(AbstractBaseStatement):

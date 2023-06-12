@@ -1,5 +1,5 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbotpro.trainers import ChatterBotCorpusTrainer
 
 '''
 This is an example showing how to create an export file from

@@ -4,7 +4,7 @@ Ubuntu Corpus of conversation dialog.
 """
 import logging
 from chatterbot import ChatBot
-from chatterbot.trainers import UbuntuCorpusTrainer
+from chatterbotpro.trainers import UbuntuCorpusTrainer
 
 # Enable info level logging
 logging.basicConfig(level=logging.INFO)

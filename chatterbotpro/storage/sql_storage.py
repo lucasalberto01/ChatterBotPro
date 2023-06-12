@@ -1,4 +1,4 @@
-from chatterbot.storage import StorageAdapter
+from chatterbotpro.storage import StorageAdapter
 
 
 class SQLStorageAdapter(StorageAdapter):
@@ -52,18 +52,18 @@ class SQLStorageAdapter(StorageAdapter):
         """
         Return the statement model.
         """
-        from chatterbot.ext.sqlalchemy_app.models import Statement
+        from chatterbotpro.ext.sqlalchemy_app.models import Statement
         return Statement
 
     def get_tag_model(self):
         """
         Return the conversation model.
         """
-        from chatterbot.ext.sqlalchemy_app.models import Tag
+        from chatterbotpro.ext.sqlalchemy_app.models import Tag
         return Tag
 
     def model_to_object(self, statement):
-        from chatterbot.conversation import Statement as StatementObject
+        from chatterbotpro.conversation import Statement as StatementObject
 
         return StatementObject(**statement.serialize())
 
@@ -239,7 +239,8 @@ class SQLStorageAdapter(StorageAdapter):
                 statement_model_object.search_text = self.tagger.get_text_index_string(statement.text)
 
             if not statement.search_in_response_to and statement.in_response_to:
-                statement_model_object.search_in_response_to = self.tagger.get_text_index_string(statement.in_response_to)
+                statement_model_object.search_in_response_to = self.tagger.get_text_index_string(
+                    statement.in_response_to)
 
             new_tags = set(tag_data) - set(create_tags.keys())
 
@@ -357,7 +358,7 @@ class SQLStorageAdapter(StorageAdapter):
         """
         Populate the database with the tables.
         """
-        from chatterbot.ext.sqlalchemy_app.models import Base
+        from chatterbotpro.ext.sqlalchemy_app.models import Base
         Base.metadata.create_all(self.engine)
 
     def _session_finish(self, session, statement_text=None):

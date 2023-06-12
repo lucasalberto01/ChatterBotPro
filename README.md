@@ -1,4 +1,3 @@
-
 # ChatterBot - Professional Edition
 
 <p align="center">
@@ -21,15 +20,15 @@ By default we use more in Portuguese
 An example of typical input would be something like this:
 
 > **user:** Good morning! How are you doing?  
-> **bot:**  I am doing very well, thank you for asking.  
+> **bot:** I am doing very well, thank you for asking.  
 > **user:** You're welcome.  
-> **bot:** Do you like hats?  
+> **bot:** Do you like hats?
 
 ## Differences from the original project
 
-* Update to Python 3.11
-* Update spaCy to 3.5
-* Change in language choice system
+- Update to Python 3.11
+- Update spaCy to 3.5
+- Change in language choice system
 
 ## How it works
 
@@ -42,7 +41,7 @@ An untrained instance of ChatterBot starts off with no knowledge of how to commu
 This package can be installed from [~~PyPi~~](https://pypi.python.org) by running:
 
 ```ssh
-pip install https://github.com/lucasalberto01/chatterbot-pro/archive/refs/heads/master.zip 
+pip install https://github.com/lucasalberto01/chatterbot-pro/archive/refs/heads/master.zip
 ```
 
 ### By source
@@ -63,7 +62,7 @@ pip install ./chatterbot-pro
 
 ```code
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbotpro.trainers import ChatterBotCorpusTrainer
 
 chatbot = ChatBot('Ron Obvious')
 
@@ -87,7 +86,7 @@ in the [chatterbot-corpus](https://github.com/gunthercox/chatterbot-corpus)
 package if you are interested in contributing.
 
 ```code
-from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbotpro.trainers import ChatterBotCorpusTrainer
 
 # Create a new trainer for the chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)
