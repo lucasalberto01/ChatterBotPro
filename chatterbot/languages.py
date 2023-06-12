@@ -584,6 +584,7 @@ class ENG:
     ISO_639_1 = 'en'
     ISO_639 = 'eng'
     ENGLISH_NAME = 'English'
+    MODEL = 'en_core_web_sm'
 
 
 class EPO:
@@ -716,6 +717,7 @@ class GER:
     ISO_639_1 = 'de'
     ISO_639 = 'ger'
     ENGLISH_NAME = 'German'
+    MODEL = 'de_core_news_sm'
 
 
 class GEZ:
@@ -1706,6 +1708,7 @@ class POR:
     ISO_639_1 = 'pt'
     ISO_639 = 'por'
     ENGLISH_NAME = 'Portuguese'
+    MODEL = "pt_core_news_sm"
 
 
 class PUS:

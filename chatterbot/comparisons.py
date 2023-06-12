@@ -74,7 +74,7 @@ class SpacySimilarity(Comparator):
             )
             raise OptionalDependencyImportError(message)
 
-        self.nlp = spacy.load("pt_core_web_sm")
+        self.nlp = spacy.load(self.language.MODEL)
 
     def compare(self, statement_a, statement_b):
         """
@@ -127,7 +127,7 @@ class JaccardSimilarity(Comparator):
             )
             raise OptionalDependencyImportError(message)
 
-        self.nlp = spacy.load("pt_core_web_sm")
+        self.nlp = spacy.load(self.language.MODEL)
 
     def compare(self, statement_a, statement_b):
         """

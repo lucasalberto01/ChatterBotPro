@@ -15,3 +15,4 @@ dist
 
 # Database files
 *.sqlite3
+terminal_example.py
