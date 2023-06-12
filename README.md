@@ -2,7 +2,7 @@
 # ChatterBot - Professional Edition
 
 <p align="center">
-  <img width="100%" height="auto" src="https://github.com/lucasalberto01/chatterbot-pro/assets/29151352/ef57a48f-7582-43e8-8d1c-e19be30a9f90">
+  <img width="100%" height="auto" src="https://github.com/lucasalberto01/chatterbot-pro/assets/29151352/5ddc3452-9314-44df-87c1-16145b89b9c9">
 </p>
 
 ChatterBot is a machine-learning based conversational dialog engine build in
