@@ -1,5 +1,5 @@
 
-# ChatterBot Professional Edition
+# ChatterBot - Professional Edition
 
 <p align="center">
   <img width="320" height="auto" src="https://github.com/lucasalberto01/chatterbot-pro/assets/29151352/fa57c25c-ca8b-4577-8093-1396626f5f69">
