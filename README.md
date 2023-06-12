@@ -37,15 +37,31 @@ An untrained instance of ChatterBot starts off with no knowledge of how to commu
 
 ## Installation
 
+### By pip
+
 This package can be installed from [~~PyPi~~](https://pypi.python.org) by running:
 
-```
+```ssh
 pip install https://github.com/lucasalberto01/chatterbot-pro/archive/refs/heads/master.zip 
+```
+
+### By source
+
+1. Download the source code:
+
+```ssh
+git clone https://github.com/lucasalberto01/chatterbot-pro.git
+```
+
+2. Install the code you have just downloaded using pip
+
+```ssh
+pip install ./chatterbot-pro
 ```
 
 ## Basic Usage
 
-```
+```code
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
@@ -70,7 +86,7 @@ in other languages would be greatly appreciated. Take a look at the data files
 in the [chatterbot-corpus](https://github.com/gunthercox/chatterbot-corpus)
 package if you are interested in contributing.
 
-```
+```code
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
 # Create a new trainer for the chatbot
