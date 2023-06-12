@@ -35,7 +35,7 @@ with open('README.md') as f:
 REQUIREMENTS = []
 DEPENDENCIES = []
 
-with open('requirements.txt') as requirements:
+with open('requirements.txt', encoding="utf-16") as requirements:
     for requirement in requirements.readlines():
         if requirement.startswith('git+git://'):
             DEPENDENCIES.append(requirement)
@@ -57,15 +57,15 @@ setup(
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     packages=[
-        'chatterbot',
-        'chatterbot.storage',
-        'chatterbot.logic',
-        'chatterbot.ext',
-        'chatterbot.ext.sqlalchemy_app',
-        'chatterbot.ext.django_chatterbot',
-        'chatterbot.ext.django_chatterbot.migrations',
+        'chatterbotpro',
+        'chatterbotpro.storage',
+        'chatterbotpro.logic',
+        'chatterbotpro.ext',
+        'chatterbotpro.ext.sqlalchemy_app',
+        'chatterbotpro.ext.django_chatterbot',
+        'chatterbotpro.ext.django_chatterbot.migrations',
     ],
-    package_dir={'chatterbot': 'chatterbot'},
+    package_dir={'chatterbotpro': 'chatterbotpro'},
     include_package_data=True,
     install_requires=REQUIREMENTS,
     dependency_links=DEPENDENCIES,
