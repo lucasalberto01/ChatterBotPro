@@ -3,6 +3,8 @@ from chatterbotpro.storage import StorageAdapter
 from chatterbotpro.logic import LogicAdapter
 from chatterbotpro.search import TextSearch, IndexedTextSearch
 from chatterbotpro import utils
+from chatterbotpro.languages import POR, BaseLanguage
+from chatterbotpro.wordsub import WordSub
 
 
 class ChatBot(object):
@@ -18,6 +20,16 @@ class ChatBot(object):
         logic_adapters = kwargs.get('logic_adapters', [
             'chatterbotpro.logic.BestMatch'
         ])
+
+        # The last 10 statements are stored by default
+        self.language: BaseLanguage = kwargs.get('language', POR)
+
+        # set up the word substitutors (subbers):
+        self._subbers = {}
+        self._subbers['gender'] = WordSub(self.language.GENDER)
+        self._subbers['person'] = WordSub(self.language.PERSON)
+        self._subbers['person2'] = WordSub(self.language.PERSON2)
+        self._subbers['normal'] = WordSub(self.language.NORMAL)
 
         # Check that each adapter is a valid subclass of it's respective parent
         utils.validate_adapter_class(storage_adapter, StorageAdapter)
@@ -97,8 +109,16 @@ class ChatBot(object):
 
         text = kwargs.pop('text')
 
+        # Changer abbreviation
+        text = self._subbers["normal"].sub(text)
+
+        # Changer persona to learning
+        text = self._subbers["person"].sub(text)
+
+        # Create the statement instance
         input_statement = Statement(text=text, **kwargs)
 
+        # Add any input statement tags to the list of tags
         input_statement.add_tags(*tags)
 
         # Preprocess the input statement
@@ -106,13 +126,11 @@ class ChatBot(object):
             input_statement = preprocessor(input_statement)
 
         # Make sure the input statement has its search text saved
-
         if not input_statement.search_text:
             input_statement.search_text = self.storage.tagger.get_text_index_string(input_statement.text)
 
         if not input_statement.search_in_response_to and input_statement.in_response_to:
-            input_statement.search_in_response_to = self.storage.tagger.get_text_index_string(
-                input_statement.in_response_to)
+            input_statement.search_in_response_to = self.storage.tagger.get_text_index_string(input_statement.in_response_to)
 
         response = self.generate_response(input_statement, additional_response_selection_parameters)
 

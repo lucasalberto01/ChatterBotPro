@@ -10,7 +10,7 @@ class LowercaseTagger(object):
     def __init__(self, language=None):
         self.language = language or languages.POR
 
-    def get_text_index_string(self, text):
+    def get_text_index_string(self, text: str):
         return text.lower()
 
 
@@ -28,7 +28,7 @@ class PosLemmaTagger(object):
 
         self.nlp = spacy.load(self.language.MODEL)
 
-    def get_text_index_string(self, text):
+    def get_text_index_string(self, text: str):
         """
         Return a string of text containing part-of-speech, lemma pairs.
         """
